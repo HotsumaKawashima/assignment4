@@ -31,8 +31,10 @@ class CityViewController: UIViewController {
 		view.addSubview(butt)
 	}
   
-  @objc func showWeatherDetails() {
-    
-  }
+  	@objc func showWeatherDetails() {
+        let detailsViewController = DetailsViewController()
+        detailsViewController.city = city
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
+  	}
 }
 
